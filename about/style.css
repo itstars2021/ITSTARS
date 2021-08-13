@@ -360,56 +360,48 @@ h4 {
     font-size: 20px;
     color: white;
 }
+/* icon start*/
 .sm-inner {
     position: relative;
     display: flex;
     margin-top: 30px;
     justify-content: center;
 }
-.sm-inner .sm-item {
+.sm-item a{
     position: relative;
-    list-style: none;
-    margin: 0 10px;
-    cursor: pointer;
+    display: block;
+    color: rgb(116, 189, 218);
+    font-size: 40px;
+    height: 60px;
+    width: 60px;
+    background: #171515;
+    border-radius: 50%;
+    margin: 0 15px;
+    padding-top: 5px;
+    transition: .5s;
 }
-.sm-inner .sm-item .sm-link {
-    text-decoration: none;
-}.sm-inner .sm-item .sm-link .fab {
-    font-size: 3em;
-    color: #222;
-}
-.sm-inner .sm-item::before {
-    font-family: fontAwesome;
+.sm-item a::before {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 3em;
-    height: 0;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
+    background: #d35400;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+    transition: .5s;
 }
-.sm-inner .sm-item:nth-child(1)::before{
-    content: '\f16d';
-    color: #df421e;
-    border-bottom: 4px solid #df421e;
+
+.sm-item a:hover::before {
+    filter: blur(3px);
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d35400;
 }
-.sm-inner .sm-item:hover::before {
-    height: 100%;
+.sm-item a:hover {
+    color: #ffa502;
+    box-shadow: 0 0 20px #d35400;
+    text-shadow: 0 0 20px #d35400;
 }
-.sm-inner .sm-item:nth-child(2)::before{
-    content: '\f09b';
-    color: #1da1f2;
-    border-bottom: 4px solid #1da1f2;
-}
-.sm-inner .sm-item:nth-child(3)::before{
-    content: '\f1a0';
-    color: #4ff21d;
-    border-bottom: 4px solid #4ff21d;
-}
-.sm-link {
-    color: #000;
-    text-decoration: none;
-}
+/* icon end*/
 .btn-cv {
     position: relative;
     display: inline-block;
